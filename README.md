@@ -35,7 +35,7 @@ This project is licensed under the MIT License.
 
 ## Contributors
 - **Tushar Pal**
-- **Sukhdeep Singh LUNd**
+- **Sukhdeep Singh**
 
 ## Acknowledgments
 Special thanks to Fanshawe College for supporting this project.
