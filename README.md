@@ -12,7 +12,7 @@ Music Mixer is a web-based application that allows users to mix and manipulate a
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript
+- JavaScript(NOT YET)
 
 ## Installation
 1. Clone this repository:
