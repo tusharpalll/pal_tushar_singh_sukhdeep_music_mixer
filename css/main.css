@@ -93,3 +93,34 @@ main p{
     margin-top: 0;
     background-color: black;
 }
+
+#mixer{
+    display: flex;
+    height : 50vh;
+    width: 97%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 380px;
+    margin-left: 20px;
+    position: relative;
+}
+
+#cornertext{
+    font-size: 40px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+}
+
+#cornerp{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-left: 1300px;
+    margin-top: -5px;
+    text-align: center;
+    color: rgb(144, 143, 143);
+}
+
