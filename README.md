@@ -34,8 +34,8 @@ Music Mixer is a web-based application that allows users to mix and manipulate a
 This project is licensed under the MIT License.
 
 ## Contributors
-- **Tushar Singh**
-- **Sukhdeep**
+- **Tushar Pal**
+- **Sukhdeep Singh LUNd**
 
 ## Acknowledgments
 Special thanks to Fanshawe College for supporting this project.
