@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musix Mixer</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
+
+
 <body>
+    <!--HEADER-->
     <header>
             <nav>
                 <img src="images/music-player-mixer-svgrepo-com.svg" alt="" id="logo">
@@ -14,24 +18,23 @@
                     <h4><a href="#">Home</a></h4>
                     <h4><a href="#">studio</a></h4>
                     <h4><a href="#">playlist</a></h4>
+                    <i class="menu-chigo"></i>
                   </div>
             </nav>
     </header>
+
+    <!--MAIN CONTENT-->
     <main>
-        <div id="center">
-            <video autoplay loop muted src="video/3196427-uhd_3840_2160_25fps.mp4"></video>
-        </div>
-        <div>
+        <section id="center">
+            <video autoplay loop muted>
+                <source src="video/3196427-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section id="intro">
             <p>Drag and drop, audio, design improvements</p>
             <h1>Music Mixer</h1>
-        </div>
-        <section id="mixer">
-            <div id="mixer-part1">
-                <h3 id="cornertext">The LATEST</h3>
-                <p id="cornerp">GO TO NEWS PAGE</p>
-            </div>
         </section>
     </main>
-    <script src="js/script.js" ></script>
 </body>
 </html>
