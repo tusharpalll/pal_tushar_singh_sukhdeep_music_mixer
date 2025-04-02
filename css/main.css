@@ -1,155 +1,280 @@
-*{
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-html,body{
-    height: 100%;
-    width: 100%;
-}
-
-nav{
-    height: 2vw 2vw;
-    width: 100%;
-    background: transparent;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#logo{
-    margin: 20px;
-    margin-left: 40px;
-    width: 50px;
-}
-
-#nav-part1{
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #4cc9f0;
+    text-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+  }
+  
+  .controls {
     display: flex;
-    align-items: center;
-    gap: 1vw;
-    margin-right: 30px;
-    font-size: 15px;
-}
-
-#nav-part1 h4 {
-    border: 1px solid #7c7979;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .control-btn {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
     border-radius: 50px;
-    padding: 10px 20px;
-    font-weight: 500;
-}
-
-#nav-part1 h4 a {
-    text-decoration: none;
-    color: rgb(112, 176, 96);
-    z-index: -1;
-}
-
-#nav-part1 h4::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-
-}
-
-#center{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1
-}
-
-video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#text {
-    position: absolute;
-    padding-left: 70%;
-    background-color: red;
-}
-
-main h1{
-    color:  rgb(112, 176, 96);
-    font-size: 70px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-main p{
-    margin-top: 120px;
-    color:  rgb(185, 185, 185);
-    font-size: 2ch;
-    text-align: center;
-}
-
-#content {
-    margin-top: 0;
-    background-color: black;
-}
-
-/* experiment 1
-#mixer{
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .control-btn:hover {
+    background-color: #3a0ca3;
+    transform: scale(1.05);
+  }
+  
+  main {
     display: flex;
-    justify-content: space-between;
-    height : 50vh;
-    width: 97%;
-    background-color: rgb(255, 255, 255);
-    margin-top: 380px;
-    margin-left: 20px;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+  }
+  
+  .sound-library {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sound-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .sound-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: grab;
+    transition: all 0.3s ease;
+  }
+  
+  .sound-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .sound-item.dragging {
+    opacity: 0.5;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .drums-icon {
+    background-color: #f72585;
+  }
+  
+  .bass-icon {
+    background-color: #7209b7;
+  }
+  
+  .melody-icon {
+    background-color: #3a0ca3;
+  }
+  
+  .vocals-icon {
+    background-color: #4361ee;
+  }
+  
+  .effects-icon {
+    background-color: #4cc9f0;
+  }
+  
+  .mixer-stage {
+    flex: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stage-characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex: 1;
+  }
+  
+  .character-slot {
     position: relative;
-}
-
-#cornertext{
+    width: 120px;
+    height: 180px;
     display: flex;
-    position: absolute;
-    font-size: 40px;
-    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .character.active {
+    animation: pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(76, 201, 240, 0.8);
+    }
+  }
+  
+  .drop-zone {
     width: 100%;
-    text-align: center;
-    margin: 10px;
-}
-
-#cornerp{
-    position: absolute;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    font-size: 15px;
-    padding: 5px 10px;
-    text-align: center;
-    color: rgb(144, 143, 143);
-    margin: 10px;
-
-
-}
-*/
-
-/* Experiment 2
-#mixer-part1{
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 200px;
-    background-color: rgb(255, 255, 255);
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background: transparent;
-}
-.child{
-    background-color: salmon;
-    height: 300px;
-    width: 300px;
-    margin: 10px;
-    align-items: center;
-} */
-
-
+    justify-content: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+  }
+  
+  .drop-zone.drag-over {
+    background-color: rgba(76, 201, 240, 0.3);
+    border-color: #4cc9f0;
+  }
+  
+  .drop-zone.has-sound {
+    background-color: rgba(76, 201, 240, 0.2);
+    border-style: solid;
+    color: white;
+  }
+  
+  h2 {
+    color: #f72585;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .visualizer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  
+  #visualizer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sound-items {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .character-slot {
+        width: 100px;
+        height: 160px;
+    }
+    
+    .character {
+        width: 80px;
+        height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stage-characters {
+        gap: 1rem;
+    }
+    
+    .character-slot {
+        width: 80px;
+        height: 140px;
+    }
+    
+    .character {
+        width: 60px;
+        height: 60px;
+    }
+  }
