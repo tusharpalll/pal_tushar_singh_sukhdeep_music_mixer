@@ -3,29 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musix Mixer</title>
+    <title>Music Mixer</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
-            <nav>
-                <img src="images/music-player-mixer-svgrepo-com.svg" alt="" id="logo">
-                <div id="nav-part1">
-                    <h4><a href="#">Home</a></h4>
-                    <h4><a href="#">studio</a></h4>
-                    <h4><a href="#">playlist</a></h4>
-                  </div>
-            </nav>
+        <h1>Music Mixer</h1>
+        <div class="controls">
+            <button id="play-btn" class="control-btn">Play</button>
+            <button id="stop-btn" class="control-btn">Stop</button>
+            <button id="reset-btn" class="control-btn">Reset</button>
+        </div>
     </header>
+
     <main>
-        <div id="center">
-            <video autoplay loop muted src="video/3196427-uhd_3840_2160_25fps.mp4"></video>
-        </div>
-        <div>
-            <p>Drag and drop, audio, design improvements</p>
-            <h1>Music Mixer</h1>
-        </div>
+        <section class="sound-library">
+            <h2>Sound Library</h2>
+            <div class="sound-items">
+                <div class="sound-item" draggable="true" data-sound="drums">
+                    <div class="icon drums-icon"></div>
+                    <span>Drums</span>
+                </div>
+                <div class="sound-item" draggable="true" data-sound="bass">
+                    <div class="icon bass-icon"></div>
+                    <span>Bass</span>
+                </div>
+                <div class="sound-item" draggable="true" data-sound="melody">
+                    <div class="icon melody-icon"></div>
+                    <span>Melody</span>
+                </div>
+                <div class="sound-item" draggable="true" data-sound="vocals">
+                    <div class="icon vocals-icon"></div>
+                    <span>Vocals</span>
+                </div>
+                <div class="sound-item" draggable="true" data-sound="effects">
+                    <div class="icon effects-icon"></div>
+                    <span>Effects</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mixer-stage">
+            <h2>Drag Sounds Here</h2>
+            <div class="stage-characters">
+                <div class="character-slot" data-slot="1">
+                    <div class="character"></div>
+                    <div class="drop-zone">Drop here</div>
+                </div>
+                <div class="character-slot" data-slot="2">
+                    <div class="character"></div>
+                    <div class="drop-zone">Drop here</div>
+                </div>
+                <div class="character-slot" data-slot="3">
+                    <div class="character"></div>
+                    <div class="drop-zone">Drop here</div>
+                </div>
+                <div class="character-slot" data-slot="4">
+                    <div class="character"></div>
+                    <div class="drop-zone">Drop here</div>
+                </div>
+                <div class="character-slot" data-slot="5">
+                    <div class="character"></div>
+                    <div class="drop-zone">Drop here</div>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="js/script.js" ></script>
+
+    <footer>
+        <p>Music Mixer Project - Created by Tushar Pal & Sukhdeep Singh</p>
+    </footer>
+
+    <div class="visualizer-container">
+        <canvas id="visualizer"></canvas>
+    </div>
+
+    <div id="audio-container"></div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
