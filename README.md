@@ -1,12 +1,11 @@
 # Music Mixer
 
 ## Overview
-Music Mixer is a web-based application that allows users to mix and manipulate audio tracks dynamically. This interactive tool enables users to control playback, adjust volume levels, and apply effects in real-time.
+Music Mixer is a web-based application that allows users to mix and manipulate audio tracks dynamically. This interactive tool enables users to control playback,and apply effects in real-time.
 
 ## Features
 - Play, pause, and stop audio tracks
-- Adjust volume levels individually for each track
-- Apply audio effects such as fade in/out
+- Mix the beat for beat boxing 
 - User-friendly interface with responsive design
 
 ## Technologies Used
@@ -27,7 +26,6 @@ Music Mixer is a web-based application that allows users to mix and manipulate a
 
 ## Usage
 - Click on the play button to start mixing music.
-- Use sliders to control volume and effects.
 - Experiment with different tracks to create unique mixes.
 
 ## License
